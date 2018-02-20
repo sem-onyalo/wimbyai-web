@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 
 export default class MainNav extends Component {
+    constructor(props) {
+      super(props);
+
+      this.handleNavBarClick = this.handleNavBarClick.bind(this);
+    }
     render() {
       return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
@@ -11,10 +16,17 @@ export default class MainNav extends Component {
 
           <div className="collapse navbar-collapse" id="mainNavBar">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active"><a className="nav-link" href="#">Projects</a></li>
+              <li className={this.props.page == 1 ? "nav-item active" : "nav-item"}><a className="nav-link" href="#" onClick={() => this.handleNavBarClick(1)}>Projects</a></li>
+              <li className={this.props.page == 2 ? "nav-item active" : "nav-item"}><a className="nav-link" href="#" onClick={() => this.handleNavBarClick(2)}>Information</a></li>
             </ul>
           </div>
         </nav>
       );
+    }
+
+    handleNavBarClick(page) {
+      this.props.onButtonClick({
+        newPage: page
+      });
     }
   }
