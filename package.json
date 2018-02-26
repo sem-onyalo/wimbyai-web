@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --recursive -w scripts/test.js ./src/*.test.js",
     "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js",
-    "build": "./node_modules/.bin/webpack --config ./webpack/webpack.prod.config.js"
+    "build": "NODE_ENV=production webpack --config ./webpack/webpack.prod.config.js"
   },
   "author": "Sem Onyalo",
   "license": "ISC",
