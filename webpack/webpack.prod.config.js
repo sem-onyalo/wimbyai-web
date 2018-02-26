@@ -1,6 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 
+var parentDir = path.join(__dirname, '../');
+
 module.exports = {
     entry: [
         'babel-polyfill',
@@ -17,8 +19,8 @@ module.exports = {
         }]
     },
     output: {
-        path: __dirname,
-        publicPath: '/',
+        path: parentDir + '/build',
+        publicPath: 'build/',
         filename: 'main.js'
     },
     node: {
