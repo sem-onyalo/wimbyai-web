@@ -9,7 +9,7 @@ export default class MainNav extends Component {
     render() {
       return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-          <a className="navbar-brand" href="#">WimbyAI</a>
+          <a className="navbar-brand" href="#">WimbyAI <sup>BETA</sup></a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

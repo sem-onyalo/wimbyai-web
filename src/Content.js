@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Discussion from './Discussion';
+import Information from './Information';
 import Projects from './Projects';
 
 export default class Content extends Component {
@@ -9,7 +9,7 @@ export default class Content extends Component {
                 return <Projects/>;
 
             case 2:
-                return <Discussion/>;
+                return <Information/>;
 
             default:
                 return <div>Error loading page content</div>;

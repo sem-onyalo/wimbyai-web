@@ -5,6 +5,7 @@ var parentDir = path.join(__dirname, '../');
 
 module.exports = {
     entry: [
+        'babel-polyfill',
         path.join(__dirname, '../index.js')
     ],
     module: {
@@ -24,5 +25,10 @@ module.exports = {
     devServer: {
         contentBase: parentDir,
         historyApiFallback: true
+    },
+    node: {
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     }
 }

@@ -14,7 +14,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2",
+    "request-promise-native": "^1.0.5",
+    "url-parse": "^1.2.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
