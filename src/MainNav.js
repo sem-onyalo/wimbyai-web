@@ -9,8 +9,8 @@ export default class MainNav extends Component {
     render() {
       return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-          <a className="navbar-brand" href="#">WimbyAI <sup>BETA</sup></a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+          <a className="navbar-brand" href="#">City of Toronto Development and Projects Portal <sub>powered by WimbyAI</sub></a>
+          {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
 
@@ -19,7 +19,7 @@ export default class MainNav extends Component {
               <li className={this.props.page == 1 ? "nav-item active" : "nav-item"}><a className="nav-link" href="#" onClick={() => this.handleNavBarClick(1)}>Projects</a></li>
               <li className={this.props.page == 2 ? "nav-item active" : "nav-item"}><a className="nav-link" href="#" onClick={() => this.handleNavBarClick(2)}>Information</a></li>
             </ul>
-          </div>
+          </div> */}
         </nav>
       );
     }

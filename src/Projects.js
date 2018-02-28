@@ -58,12 +58,21 @@ export default class Projects extends Component {
         });
 
         // TODO: pull marker locations from datasource
-        var marker = new googleMaps.Marker({
+
+        var infoWindow1 = new googleMaps.InfoWindow({
+            content: '<div id="infoWindow1">23 and 25 Glen Watford Drive Land Development Project</div>'
+        });
+
+        var marker1 = new googleMaps.Marker({
             map: map,
             position: { lat: 43.787476, lng: -79.275253 } // 23 and 25 Glen Watford Drive Land Development Project
         });
 
-        marker = new googleMaps.Marker({
+        marker1.addListener('click', () => {
+            infoWindow1.open(map, marker1);
+        });
+
+        var marker2 = new googleMaps.Marker({
             map: map,
             position: { lat: 43.651937, lng: -79.363606 } // First Parliment Development Project
         });

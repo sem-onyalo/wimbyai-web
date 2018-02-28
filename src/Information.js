@@ -50,22 +50,39 @@ export default class Information extends Component {
             answer = (
                 <div>
                     <br />
-                    <h4>Answer</h4>
+                    <h5>Answer</h5>
                     <p>{this.state.searchResults}</p>
+                    <div className="row learn-more">
+                        <div className="col-sm-5 left"><a href="">Learn more about this project</a></div>
+                        <div className="col-sm-2 sep">-</div>
+                        <div className="col-sm-5 right"><a href="">Learn more about noise guidelines</a></div>
+                    </div>
                 </div>
             );
         }
 
         return (
             <div className="container information-container">
-                <h4>Project</h4>
-                <select className="form-control">
-                    <option value="1">23 and 25 Glen Watford Drive Land Development Project</option>
-                </select>
+                {/* <div className="projects-wrapper">
+                    <div className="title">Projects</div>
+                    <select >
+                        <option value="1">23 and 25 Glen Watford Drive Land Development Project</option>
+                    </select>
+                </div> */}
+                <h3>23 and 25 Glen Watford Drive Land Development Project</h3>
+                <h5 className="project-summary">Summary</h5>
+                <p>
+                    Developer: James Development Corp<br />
+                    Planner on File: James Jones<br />
+                    Date of Application: Feb 22, 2018<br />
+                    Project: 23 storey high rise development<br />
+                </p>
                 <br />
-                <input type="text" className="form-control" placeholder="Ask a question..." onChange={this.handleSearchTextChange} />
+                <div className="question-wrapper">
+                    <input type="text" placeholder="Ask a question..." onChange={this.handleSearchTextChange} />
+                    <input type="button" value="Search" onClick={this.handleSearchButtonClick} />
+                </div>
                 <br />
-                <input type="button" className="btn btn-primary" value="Search" onClick={this.handleSearchButtonClick} />
                 {answer}
             </div>
         );

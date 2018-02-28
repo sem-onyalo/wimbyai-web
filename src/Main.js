@@ -7,7 +7,7 @@ export default class Main extends Component {
     super(props);
 
     this.state = {
-      currentPage: 1
+      currentPage: 2
     };
 
     this.handleMainNavButtonClick = this.handleMainNavButtonClick.bind(this);
