@@ -1,1 +1,1 @@
-## WimbyAI Web Application
+# WimbyAI Web Application

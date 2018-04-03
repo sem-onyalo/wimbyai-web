@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import load from 'little-loader';
-import './Projects.css';
 
-export default class Projects extends Component {
+class Projects extends Component {
     constructor(props) {
         super(props);
 
@@ -57,25 +56,34 @@ export default class Projects extends Component {
             zoom: 10
         });
 
-        // TODO: pull marker locations from datasource
+        // TODO: pull projects from datasource
+        var projects = [
+            {
+                id: 1,
+                name: '23 and 25 Glen Watford Drive Land Development Project',
+                position: { lat: 43.787476, lng: -79.275253 }
+            },
+            // {
+            //     id: 2,
+            //     name: 'First Parliment Development Project',
+            //     position: { lat: 43.651937, lng: -79.363606 }
+            // }
+        ];
 
-        var infoWindow1 = new googleMaps.InfoWindow({
-            content: '<div id="infoWindow1">23 and 25 Glen Watford Drive Land Development Project</div>'
-        });
+        for (var i = 0; i < projects.length; i++) {
+            var marker = new googleMaps.Marker({
+                map: map,
+                position: projects[i].position
+            });
 
-        var marker1 = new googleMaps.Marker({
-            map: map,
-            position: { lat: 43.787476, lng: -79.275253 } // 23 and 25 Glen Watford Drive Land Development Project
-        });
+            var infoWindow = new googleMaps.InfoWindow({
+                content: `<div id="infoWindow${projects[i].id}">${projects[i].name}</div>`
+            });
 
-        marker1.addListener('click', () => {
-            infoWindow1.open(map, marker1);
-        });
-
-        var marker2 = new googleMaps.Marker({
-            map: map,
-            position: { lat: 43.651937, lng: -79.363606 } // First Parliment Development Project
-        });
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+        }
     }
 
     waitForGoogleAPI() {
@@ -113,3 +121,5 @@ export default class Projects extends Component {
         window.addEventListener("resize", this.updateMapDimensions);
     }
 }
+
+export default Projects;
