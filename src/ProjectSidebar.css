@@ -1,0 +1,55 @@
+.project-sidebar {
+    height: 100%;
+    width: 550px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding: 20px 40px 10px 40px;
+}
+
+.project-sidebar .fas {
+    cursor: pointer;
+}
+
+.project-summary {
+    color: #999;
+}
+
+.question-wrapper {
+    position: relative;
+}
+
+.question-wrapper input[type=text] {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px 160px 10px 15px;
+    outline: none;
+}
+
+.question-wrapper input[type=button] {
+    position: absolute;
+    border-radius: 0 6px 6px 0;
+    right: 0;
+    border: 0;
+    width: 150px;
+    height: 46px;
+    color: #fff;
+    background: #065cb7;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .project-sidebar {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-sidebar {
+        width: 100%;
+    }
+}
